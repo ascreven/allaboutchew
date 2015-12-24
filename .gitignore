@@ -16,8 +16,3 @@
 
 /config/initializers/secret_token.rb
 /config/secrets.yml
->>>>>>> added gitignore
-=======
-config/initializers/secret_token.rb
-config/secrets.yml
->>>>>>> updated .gitignore page
