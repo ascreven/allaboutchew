@@ -1,5 +1,7 @@
 class DogsController < ApplicationController
 
+  # before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
     @dogs = Dog.all.order(session[:sort_by])
   end
