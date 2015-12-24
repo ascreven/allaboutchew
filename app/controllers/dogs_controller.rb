@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
+
   def index
-    @dogs = Dog.all
+    @dogs = Dog.all.order(session[:sort_by])
   end
 
   def new
