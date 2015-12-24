@@ -1,13 +1,11 @@
 <h2>New Dog</h2>
 
-<form action='/dogs' method='post'>
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for='dog[name]'>Name</label>
-  <input name='dog[name]'>
+<%= form_for @dog do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <label for='dog[age]'>Age</label>
-  <input name='dog[age]'>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
 
-  <input type='submit' value='Create'>
-
-</form>
+  <%= f.submit %>
+<% end %>

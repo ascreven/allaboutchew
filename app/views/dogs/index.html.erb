@@ -1,4 +1,4 @@
-<h2>Dogs <a href="/dogs/new">(+)</a></h2>
+<h2>Dogs <%= link_to "(+)", new_dog_path %></h2>
 
 <ul>
   <% @dogs.each do |dog| %>
