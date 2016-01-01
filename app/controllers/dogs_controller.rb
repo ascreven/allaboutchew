@@ -35,6 +35,9 @@ class DogsController < ApplicationController
     redirect_to "/dogs"
   end
 
+  def test_ajax
+  end
+
   private
   def dog_params
     params.require(:dog).permit(:name, :age)

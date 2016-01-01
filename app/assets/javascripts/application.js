@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+  $(".test_ajax_get").on("click", function(){
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: "http://api.petfinder.com/pet.getRandom?format=json&key=5dd75b08057fefb722b816d1a75ee6b4&callback=?"
+    }).done(function(response) {
+      console.log(response);
+    }).fail(function(response){
+      console.log("Ajax get request failed.");
+    });
+  });
+});

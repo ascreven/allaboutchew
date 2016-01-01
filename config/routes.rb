@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 root :to => 'dogs#index'
 resources :dogs do
 end
-
+get '/test_ajax', to: 'dogs#test_ajax'
+end
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -57,4 +58,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
