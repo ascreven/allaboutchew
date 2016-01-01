@@ -24,8 +24,10 @@ $(document).ready(function(){
             console.log(response);
       for(var i = 0; i < response.petfinder.pets.pet.length; i++) {
 
-      console.log(response.petfinder.pets.pet[i].name.$t);
+      console.log(response.petfinder.pets.pet[i].media.photos.photo[0].$t);
       $( "<h1>" ).text( response.petfinder.pets.pet[i].name.$t).appendTo( "body" );
+      // $( "<img>" ).text( response.petfinder.pets.pet[i].media.photos.photo[0].$t).appendTo( "body" );
+      $( '<img src="'+response.petfinder.pets.pet[i].media.photos.photo[0].$t+'"/>').appendTo( "body" );
       }
 $( "<div class=\"content\">").html( response.html ).appendTo( "body" );
     }).fail(function(response){
