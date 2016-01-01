@@ -11,22 +11,33 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 $(document).ready(function(){
-    $.ajax({
-      type: 'GET',
-      dataType: 'json',
-      url: "http://api.petfinder.com/pet.find?format=json&key=5dd75b08057fefb722b816d1a75ee6b4&callback=?&location=20010"
-    }).done(function(response) {
-      for(var i = 0; i < response.petfinder.pets.pet.length; i++) {
-      $( "<h1>" ).text( response.petfinder.pets.pet[i].name.$t).appendTo( "body" );
-      $( '<img src="'+response.petfinder.pets.pet[i].media.photos.photo[0].$t+'"/>').appendTo( "body" );
-      }
-$( "<div class=\"content\">").html( response.html ).appendTo( "body" );
-    }).fail(function(response){
-      console.log("Ajax get request failed.");
+  $.ajax({
+    type: 'GET',
+    dataType: 'json',
+    url: "http://api.petfinder.com/pet.find?format=json&key=5dd75b08057fefb722b816d1a75ee6b4&callback=?&location=20010"
+  }).done(function(response) {
+    console.log(response.petfinder.pets.pet[0].media.photos)
+    $( '<div class="container" id="pet-index-container">').appendTo( "body" );
+    $( '<div class="row" id="pet-index-row">').appendTo( "#pet-index-container" );
+    for(var i = 0; i < response.petfinder.pets.pet.length; i++) {
+      var col = $( '<div>', {'class':"col-md-3", 'id':i + 'col'});
+      $('#pet-index-row').append(col);
+      var caption = $( '<div>', {'class':"caption", 'id':i + 'cap'});
+      var pic = $( '<div>', {'class':"thumbnail", 'id':i + 'pic'});
+      col.append(
+        pic,
+        caption
+      )
+      caption.append($( '<img src="'+response.petfinder.pets.pet[i].media.photos.photo[3].$t+'" class="img-responsive" alt="Responsive image"/>'))
+      pic.append($( "<h2>" ).text( response.petfinder.pets.pet[i].name.$t))
+    }
+  }).fail(function(response){
+    console.log("Ajax get request failed.");
     // });
   });
 });

@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+ /*
+  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+  body {
+    position: static;
+    // background-image: image-url('seamlesstexture16_1200.jpg');
+  }
+  header {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+  }
+  h1 {
+    font: 400 80px/1.2 'Merienda One', Helvetica, sans-serif;
+    color: rgba(0,0,0,0.7);
+    text-shadow: 3px 3px 3px #fff;
+    margin: auto;
+    position: relative;
+  }
+
+  div.links {
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+  }
+
+
+
+  input {
+    background-color: #cfe2cf;
+    display: block;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 5px;
+    color: brown;
+  }
+
+  textarea {
+    background-color: #cfe2cf;
+    height: 300px;
+    width: 500px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    color: brown;
+    border: 1px solid black;
+  }
+
+ .jumbotron {
+   background-color: tomato;
+ }
+
+ .nav {
+   font-size: 30px;
+ }
+
+ h1 {
+   text-align: center;
+ }
