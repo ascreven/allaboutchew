@@ -21,10 +21,12 @@ $(document).ready(function(){
       dataType: 'json',
       url: "http://api.petfinder.com/pet.find?format=json&key=5dd75b08057fefb722b816d1a75ee6b4&callback=?&location=20010"
     }).done(function(response) {
-      console.log(response);
-      console.log(response.petfinder.pets.pet[0].name);
-      // console.log(response.html)
-      $( "<h1>" ).text( response.petfinder.pets.pet[0].name.$t).appendTo( "body" );
+            console.log(response);
+      for(var i = 0; i < response.petfinder.pets.pet.length; i++) {
+
+      console.log(response.petfinder.pets.pet[i].name.$t);
+      $( "<h1>" ).text( response.petfinder.pets.pet[i].name.$t).appendTo( "body" );
+      }
 $( "<div class=\"content\">").html( response.html ).appendTo( "body" );
     }).fail(function(response){
       console.log("Ajax get request failed.");
