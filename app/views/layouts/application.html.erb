@@ -7,12 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if current_user %>
-    <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
-  <% else %>
-    <h3><%= link_to 'Signup', new_user_registration_path %></h3>
-    <h3><%= link_to 'Login', new_user_session_path %></h3>
-  <% end %>
+  <div class="jumbotron">
+<div class="container">
+  <h1> All About Chew </h1>
+</div>
+</div>
+
+<div class='container'>
+  <ul class="nav navbar-nav navbar-left">
+
+      <% if current_user %>
+        <li><%= link_to 'Home', root_path%></li>
+        
+      <% else %>
+        <li><%= link_to 'Home', root_path%></li>
+        <% end %>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class='placeholder'><%= link_to 'Search', root_path %></li>
+      <% if current_user %>
+        <li><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+        <li><%= link_to 'Signup', new_user_registration_path %></li>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+
   <p class="notice"><%= notice %></p>
 <%= yield %>
 
