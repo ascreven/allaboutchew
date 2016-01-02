@@ -19,15 +19,13 @@
  @import "bootstrap";
   body {
     position: static;
-    background-image: url('seamlesstexture16_1200.jpg');
+    // background-image: image-url('seamlesstexture16_1200.jpg');
   }
-
   header {
     display: flex;
     position: relative;
     margin: 0 auto;
   }
-
   h1 {
     font: 400 80px/1.2 'Merienda One', Helvetica, sans-serif;
     color: rgba(0,0,0,0.7);
@@ -35,12 +33,6 @@
     margin: auto;
     position: relative;
   }
-
-.pic{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
   div.links {
     display: inline-flex;
