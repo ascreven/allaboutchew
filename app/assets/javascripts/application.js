@@ -21,7 +21,6 @@ $(document).ready(function(){
     dataType: 'json',
     url: "http://api.petfinder.com/pet.find?format=json&key=5dd75b08057fefb722b816d1a75ee6b4&callback=?&location=20010"
   }).done(function(response) {
-    console.log(response.petfinder.pets.pet[0].media.photos)
     $( '<div class="container" id="pet-index-container">').appendTo( "body" );
     $( '<div class="row" id="pet-index-row">').appendTo( "#pet-index-container" );
     for(var i = 0; i < response.petfinder.pets.pet.length; i++) {
@@ -30,11 +29,11 @@ $(document).ready(function(){
       var caption = $( '<div>', {'class':"caption", 'id':i + 'cap'});
       var pic = $( '<div>', {'class':"thumbnail", 'id':i + 'pic'});
       col.append(
-        pic,
-        caption
-      )
-      caption.append($( '<img src="'+response.petfinder.pets.pet[i].media.photos.photo[3].$t+'" class="img-responsive" alt="Responsive image"/>'))
-      pic.append($( "<h2>" ).text( response.petfinder.pets.pet[i].name.$t))
+        caption,
+           pic
+         );
+         pic.append($( '<img src="'+response.petfinder.pets.pet[i].media.photos.photo[3].$t+'" class="img-responsive" alt="Responsive image"/>'));
+         caption.append($( "<h2>" ).text( response.petfinder.pets.pet[i].name.$t));
     }
   }).fail(function(response){
     console.log("Ajax get request failed.");
