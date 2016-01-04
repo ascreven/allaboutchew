@@ -1,11 +1,12 @@
-<!-- <h2>Dogs <%= link_to "(+)", new_dog_path %></h2> -->
-
-<!-- <ul>
-  <% @dogs.each do |dog| %>
+<!-- <h2>Dogs <%= link_to "(+)", new_dog_path %></h2> --> -->
+<h2>Available Pets <%= link_to "(+)", new_dog_path %></h2> -->
+<ul>
+  <% @pets.each do |pet| %>
     <li>
-      <a href="/dogs/<%= dog.id %>">
-        <%= dog.name %>
+      <a href="/dogs/<%= pet.id %>">
+        <%= pet.name %>
+        <img><%= pet.picture %></img>
       </a>
     </li>
   <% end %>
-</ul> -->
+</ul>

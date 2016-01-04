@@ -3,7 +3,8 @@ class DogsController < ApplicationController
   # before_action :set_dog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @dogs = Dog.all.order(session[:sort_by])
+    @pets = Pet.all
+    # @dogs = Dog.all.order(session[:sort_by])
   end
 
   def new
@@ -16,7 +17,7 @@ class DogsController < ApplicationController
   end
 
   def show
-    @dog = Dog.find(params[:id])
+    @pet = Pet.find(params[:id])
   end
 
   def edit

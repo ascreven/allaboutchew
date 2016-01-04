@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'devise'
 
+gem 'petfinder'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
