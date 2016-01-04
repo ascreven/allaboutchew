@@ -3,7 +3,7 @@ class DogsController < ApplicationController
   # before_action :set_dog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @pets = Pet.all
+    @pets = Pet.where.not(picture: nil)
     # @dogs = Dog.all.order(session[:sort_by])
   end
 
@@ -43,4 +43,7 @@ class DogsController < ApplicationController
   def dog_params
     params.require(:dog).permit(:name, :age)
   end
+
+# A list of the param names that can be used for filtering the Product list
+
 end

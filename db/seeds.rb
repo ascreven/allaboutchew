@@ -22,17 +22,19 @@ PETFINDER.find_pets(SPECIES.sample, ZIPCODES.sample, count: 50).each do |pf|
   # pf.breeds.each do |breed|
   #   pet.breeds << Breed.find_or_create_by(name: breed)
   # end
-  # pf.photos.each do |photo|
-  #   if !photo.medium.empty? || !photo.medium.nil?
-  #     pet.picture = photo.medium
-  #   else
-  #     pet.picture = 'n/a'
-  #   end
-  # end
+  pf.photos.each do |photo|
+    if !photo.medium.empty? || !photo.medium.nil?
+      pet.picture = photo.medium
+    elsif
+      pet.picture = photo.large
+    else
+      pet.picture = photo.small
+    end
+  end
   # pf_shelter = PETFINDER.shelter(pf.shelter_id)
   # shelter = Shelter.find_or_create_by(name:pf_shelter.name, email: pf_shelter.email, phone: pf_shelter.phone, state: pf_shelter.state, city: pf_shelter.city, zip: pf_shelter.zip)
   # pet.zip_code = shelter.zip
   # shelter.save
   # pet.shelter_id = shelter.id
-  pet.save
+
 end

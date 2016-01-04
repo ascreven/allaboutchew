@@ -1,12 +1,17 @@
-<!-- <h2>Dogs <%= link_to "(+)", new_dog_path %></h2> --> -->
-<h2>Available Pets <%= link_to "(+)", new_dog_path %></h2> -->
+
+<h2>Available Pets <%= link_to "(+)", new_dog_path %></h2>
+
 <ul>
   <% @pets.each do |pet| %>
     <li>
+      <div>
       <a href="/dogs/<%= pet.id %>">
         <%= pet.name %>
-        <img><%= pet.picture %></img>
       </a>
+      <div class='image'>
+      <%= image_tag pet.picture %>
+    </div>
+  </div>
     </li>
   <% end %>
 </ul>
