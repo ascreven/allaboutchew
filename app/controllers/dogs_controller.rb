@@ -4,7 +4,6 @@ class DogsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
     @pets = Pet.where.not(picture: nil)
-    # @dogs = Dog.all.order(session[:sort_by])
   end
 
   def new
