@@ -22,6 +22,7 @@ PETFINDER.find_pets(SPECIES.sample, ZIPCODES.sample, count: 50).each do |pf|
   # pf.breeds.each do |breed|
   #   pet.breeds << Breed.find_or_create_by(name: breed)
   # end
+
   pf.photos.each do |photo|
     if !photo.medium.empty? || !photo.medium.nil?
       pet.picture = photo.medium
