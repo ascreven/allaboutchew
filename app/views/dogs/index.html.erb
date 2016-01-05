@@ -1,6 +1,7 @@
 
 <h2>Available Pets <%= link_to "(+)", new_dog_path %></h2>
-
+<div class='container'>
+  <div class='row'>
 <ul>
   <% @pets.each do |pet| %>
     <li>
@@ -15,3 +16,5 @@
     </li>
   <% end %>
 </ul>
+</div>
+</div>

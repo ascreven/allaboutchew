@@ -11,10 +11,17 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+    $('.tabs-wrapper.row').pushpin({ top: $('.tabs-wrapper.row').offset().top });
+    $('.materialboxed').materialbox();
+    // $('#nav-mobile-list').append('<li class="right">All About Chew</li>')
+  });
 // $(document).ready(function(){
 //   $.ajax({
 //     type: 'GET',
