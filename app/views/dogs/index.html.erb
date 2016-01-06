@@ -4,11 +4,11 @@
   <div class='row'>
 <ul id='container'>
   <% @pets.each do |pet| %>
-    <li>
+    <li class='pet_items'>
       <a href="/dogs/<%= pet.id %>">
         <%= pet.name %>
       </a>
-      <div class='image'>
+      <div>
       <%= image_tag pet.picture %>
   </div>
     </li>

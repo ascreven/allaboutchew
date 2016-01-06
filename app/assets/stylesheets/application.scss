@@ -22,11 +22,10 @@ $primary: tomato;
 body {
   background-image: url('seamlesstexture16_1200.jpg');
   font-family: sans-serif;
-  padding-top: 100px;
 }
 
 #all_pets{
-  // margin-top: 30px;
+  padding-top: 100px;
 }
 nav span {
   display: none;
@@ -34,7 +33,6 @@ nav span {
 
 .pinned span{
   display: inline;
-
 }
 .tabs-wrapper{
   width: 100%;
@@ -47,6 +45,9 @@ nav span {
   background-color: $primary;
 }
 
+.pet_items{
+  padding: 10px;
+}
 
  //  h1 {
  //    font: 400 80px/1.2 'Merienda One', Helvetica, sans-serif;
