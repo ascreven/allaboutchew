@@ -15,13 +15,25 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
+var ready;
+
+ready = function (){
+  $('.tabs-wrapper.row').pushpin({ top: $('.tabs-wrapper').offset().top});
+};
+
+// var navbar = $('.tabs-wrapper');
+// navbar.pushpin({console.log(pushpin)})
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
 
 
-$(document).ready(function(){
-    $('.tabs-wrapper.row').pushpin({ top: $('.tabs-wrapper.row').offset().top });
-    $('.materialboxed').materialbox();
+  // function pushpin(){
+  //  $('.tabs-wrapper.row').pushpin({ top: $('.tabs-wrapper.row').offset().top });
+    // $('.materialboxed').materialbox();
+  // }
+
     // $('#nav-mobile-list').append('<li class="right">All About Chew</li>')
-  });
 // $(document).ready(function(){
 //   $.ajax({
 //     type: 'GET',

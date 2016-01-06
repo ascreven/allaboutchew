@@ -14,7 +14,8 @@
  */
  /*
   */
-@import "materialize";
+  @import "materialize/components/color";
+  @import 'materialize';
 
 $primary: tomato;
 
@@ -23,6 +24,15 @@ body {
   font-family: sans-serif;
 }
 
+
+nav span {
+  display: none;
+}
+
+.pinned span{
+  display: inline;
+
+}
 .tabs-wrapper{
   width: 100%;
   background-color: $primary;
