@@ -1,19 +1,19 @@
+<div class='section' id='all_pets'>
 <h2>Available Pets <%= link_to "(+)", new_dog_path %></h2>
 <div class='container'>
   <div class='row'>
-<ul>
+<ul id='container'>
   <% @pets.each do |pet| %>
     <li>
-      <div class='col s4'>
       <a href="/dogs/<%= pet.id %>">
         <%= pet.name %>
       </a>
       <div class='image'>
       <%= image_tag pet.picture %>
-    </div>
   </div>
     </li>
   <% end %>
 </ul>
+</div>
 </div>
 </div>
