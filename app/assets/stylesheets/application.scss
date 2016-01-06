@@ -22,6 +22,7 @@ $primary: tomato;
 body {
   background-image: url('seamlesstexture16_1200.jpg');
   font-family: sans-serif;
+  padding-top: 70px;
 }
 
 #all_pets{
@@ -33,10 +34,13 @@ nav span {
 
 .pinned span{
   display: inline;
+  z-index: 9999;
 }
+
 .tabs-wrapper{
   width: 100%;
   background-color: $primary;
+  z-index: 9999;
 }
 .modal-header{
   top:0;
