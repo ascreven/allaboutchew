@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 root to: 'pets#index'
 resources :pets
-# get '/test_ajax', to: 'pets#test_ajax'
+get '/test_ajax', to: 'pets#test_ajax'
 end
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-SPECIES = ["bird", "cat", "dog", "horse", "pig" "smallfurry"]
+SPECIES = ["cat", "dog", "horse", "pig"]
 
 ZIPCODES = [20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018,
   20019, 20020, 20024, 20032, 20036, 20037, 20045, 20052, 20053, 20057, 20064, 20202, 20204, 20228, 20230, 20240, 20245,
@@ -38,5 +38,5 @@ PETFINDER.find_pets(SPECIES.sample, ZIPCODES.sample, count: 50).each do |pf|
   # pet.zip_code = shelter.zip
   # shelter.save
   # pet.shelter_id = shelter.id
-
+pet.save
 end
