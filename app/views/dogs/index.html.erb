@@ -1,11 +1,11 @@
 <!-- <div class='section' id='all_pets'> -->
-<h2>Available Pets <%= link_to "(+)", new_dog_path %></h2>
+<h2>Available Pets <%= link_to "(+)", new_pet_path %></h2>
 <!-- <div class='container'> -->
   <!-- <div class='row'> -->
 <ul id='container'>
   <% @pets.each do |pet| %>
     <li class='pet_items'>
-      <a href="/dogs/<%= pet.id %>">
+      <a href="/pets/<%= pet.id %>">
         <%= pet.name %>
       </a>
       <div>
