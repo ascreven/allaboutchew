@@ -1,6 +1,5 @@
-<h2>New Dog</h2>
+<%= form_for @pet do |f| %>
 
-<%= form_for @dog do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -8,4 +7,5 @@
   <%= f.text_field :age %>
 
   <%= f.submit %>
+
 <% end %>
