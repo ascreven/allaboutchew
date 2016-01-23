@@ -1,5 +1,5 @@
 <div class='container center nav-padding' id='show'>
 <h2><%= @pet.name %></h2>
       <%= image_tag @pet.picture %>
-      <div><%= simple_format(@pet.description, {}, sanitize: false).gsub(URI.regexp, '<a href="\0">\0</a>').html_safe %></div>
+      <div><%= simple_format(@pet.description, {}, sanitize: false).gsub(URI.regexp(%w(http https)), '<a href="\0">\0</a>').html_safe %></div>
 </div>
