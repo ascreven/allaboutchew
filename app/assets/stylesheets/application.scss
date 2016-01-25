@@ -10,6 +10,53 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+ /*
+  */
+  @import "materialize/components/color";
+  @import 'materialize';
+
+$primary: tomato;
+
+body {
+  background-image: url('seamlesstexture16_1200.jpg');
+  font-family: sans-serif;
+  padding-top: 70px;
+}
+
+#all_pets{
+  padding-top: 100px;
+}
+nav span {
+  display: none;
+}
+
+.pinned span{
+  display: inline;
+  z-index: 9999;
+}
+
+.tabs-wrapper{
+  width: 100%;
+  background-color: $primary;
+  z-index: 9999;
+}
+.modal-header{
+  top:0;
+  position: absolute;
+  width: 100%;
+  background-color: $primary;
+}
+
+.pet_items{
+  padding: 10px;
+}
+
+.nav-padding{
+  padding-top: 20px;
+}
+
+#show{
+  margin-top: 80px;
+}
