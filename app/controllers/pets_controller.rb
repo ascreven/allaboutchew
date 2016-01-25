@@ -4,7 +4,7 @@ class PetsController < ApplicationController
     # if params[:animal_type] && params[:location]
     #   @pets = Petfinder.find_pets(params[:animal_type], params[:location], count: 50)
     # else
-      @pets = Petfinder.find('dog', '20010')
+      @pets = Petfinder.find_pets('dog', '20010')
     # end
     # @pets = Pet.where.not(picture: nil)
   end
