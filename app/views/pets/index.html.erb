@@ -7,7 +7,9 @@
 <%= pet.name %>
 </a></h4>
 <div>
-
+  <% pet.photos.each do |photo| %>
+<%= image_tag pet.photos[0] %>
+<% end %>
 </div>
 </li>
 <% end %>
