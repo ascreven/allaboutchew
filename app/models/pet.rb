@@ -5,7 +5,7 @@ class PetFinder
       url = 'http://api.petfinder.com/pet.find?format=json&key={ENV[petfinder_key]}4&callback=?&location=20010.json'
       response = HTTParty.get(url)
       @pets = response['current_observation']['pets']
-      @photos = response['current_observation']['pets.photos']
+      # @photos = response['current_observation']['pets.photos']
       puts response
     end
 end
