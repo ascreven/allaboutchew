@@ -5,7 +5,10 @@ class PetsController < ApplicationController
     #   @pets = Petfinder.find_pets(params[:animal_type], params[:location], count: 50)
     # else
       @pets = Petfinder.find_pets('dog', '20010')
-    # end
+      respond_to do |format|
+        format.html {render :index}
+        format.json {render json: @pets}
+    end
     # @pets = Pet.where.not(picture: nil)
   end
 

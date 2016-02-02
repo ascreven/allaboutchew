@@ -1,5 +1,7 @@
 <div class='container center nav-padding' id='show'>
 <h2 class='indigo-text'><%= @pet.name %></h2>
-
+<% @pet.photos.each do |photo| %>
+<%= image_tag photo %>
+<% end %>
       <div><%= simple_format(@pet.description, {}, sanitize: false).gsub(URI.regexp(%w(http https)), '<a href="\0">\0</a>').html_safe %></div>
 </div>
