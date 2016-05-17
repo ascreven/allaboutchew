@@ -9,6 +9,9 @@ class PetsController < ApplicationController
         format.html {render :index}
         format.json {render json: @pets}
     end
+      puts "***"
+      puts @pets[1].photos
+
     # @pets = Pet.where.not(picture: nil)
   end
 
